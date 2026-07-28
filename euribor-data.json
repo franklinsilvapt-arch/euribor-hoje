@@ -1,5 +1,5 @@
 {
-  "dataReferencia": "24 de julho de 2026",
+  "dataReferencia": "27 de julho de 2026",
   "fonte": "Diario: euribor-rates.eu (EMMI, 24h). Medias mensais: Banco de Portugal (BPstat).",
   "serie": [
     {
@@ -127,6 +127,12 @@
       "m3": 2.488,
       "m6": 2.723,
       "m12": 2.993
+    },
+    {
+      "d": "27/07/2026",
+      "m3": 2.454,
+      "m6": 2.707,
+      "m12": 2.982
     }
   ],
   "historico": [
