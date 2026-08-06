@@ -16,12 +16,14 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
-          node-version: "20"
+          node-version: "24"
       - name: Atualizar euribor-data.json
         run: node scripts/update-euribor.mjs
+      - name: Atualizar medias mensais (BPstat)
+        run: node scripts/update-historico.mjs
       - name: Commit
         run: |
           git config user.name "euribor-bot"
