@@ -39,3 +39,7 @@ jobs:
       - name: Purgar jsDelivr
         run: |
           curl -s "https://purge.jsdelivr.net/gh/franklinsilvapt-arch/euribor-hoje@main/euribor-data.json" || true
+      - name: Atualizar Webflow CMS
+        env:
+          WEBFLOW_API_TOKEN: ${{ secrets.WEBFLOW_API_TOKEN }}
+        run: node scripts/update-webflow.mjs
