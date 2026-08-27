@@ -1,0 +1,43 @@
+name: Atualizar taxa Certificados de Aforro
+
+on:
+  schedule:
+    # 18:30 UTC no dia 1 e de 22 a 31 de cada mês (o IGCP publica a taxa
+    # do mês seguinte no antepenúltimo dia útil de cada mês)
+    - cron: "30 18 1,22-31 * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: certificados-aforro-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+      - name: Ler taxa no IGCP e atualizar taxa-ca.json
+        run: node scripts/update-certificados-aforro.mjs
+      - name: Commit
+        run: |
+          git config user.name "certificados-aforro-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add certificados-aforro/taxa-ca.json
+          if git diff --staged --quiet; then
+            echo "Sem alteracoes."
+          else
+            git commit -m "Certificados de Aforro: atualizacao automatica da taxa base"
+            for i in 1 2 3; do
+              git pull --rebase --autostash origin main && git push && break
+              sleep 5
+            done
+          fi
+      - name: Purgar jsDelivr
+        run: |
+          curl -s "https://purge.jsdelivr.net/gh/franklinsilvapt-arch/euribor-hoje@main/certificados-aforro/taxa-ca.json" || true
