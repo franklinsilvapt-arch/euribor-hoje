@@ -5,7 +5,12 @@
     "ano": 2026,
     "mesNum": 8
   },
-  "proxima": null,
-  "atualizadoEm": "2026-08-27T15:30:00Z",
-  "fonte": "https://www.igcp.pt/en/aforristas/produtos-de-aforro/certificados-de-aforro"
+  "proxima": {
+    "taxa": 2.5,
+    "mes": "setembro de 2026",
+    "ano": 2026,
+    "mesNum": 9
+  },
+  "atualizadoEm": "2026-08-31T22:57:25Z",
+  "fonte": "https://www.igcp.pt/pt/aforristas/produtos-de-aforro/certificados-de-aforro"
 }
