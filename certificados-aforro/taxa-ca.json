@@ -1,16 +1,11 @@
 {
   "atual": {
-    "taxa": 2.474,
-    "mes": "agosto de 2026",
-    "ano": 2026,
-    "mesNum": 8
-  },
-  "proxima": {
     "taxa": 2.5,
     "mes": "setembro de 2026",
     "ano": 2026,
     "mesNum": 9
   },
-  "atualizadoEm": "2026-08-31T22:57:25Z",
+  "proxima": null,
+  "atualizadoEm": "2026-09-01T21:11:59Z",
   "fonte": "https://www.igcp.pt/pt/aforristas/produtos-de-aforro/certificados-de-aforro"
 }
