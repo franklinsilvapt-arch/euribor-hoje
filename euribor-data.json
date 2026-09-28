@@ -1,13 +1,7 @@
 {
-  "dataReferencia": "24 de setembro de 2026",
+  "dataReferencia": "25 de setembro de 2026",
   "fonte": "Diario: euribor-rates.eu (EMMI, 24h). Medias mensais: Banco de Portugal (BPstat).",
   "serie": [
-    {
-      "d": "22/07/2026",
-      "m3": 2.456,
-      "m6": 2.69,
-      "m12": 2.912
-    },
     {
       "d": "23/07/2026",
       "m3": 2.472,
@@ -271,6 +265,12 @@
       "m3": 2.614,
       "m6": 3.013,
       "m12": 3.308
+    },
+    {
+      "d": "25/09/2026",
+      "m3": 2.607,
+      "m6": 3.07,
+      "m12": 3.379
     }
   ],
   "historico": [
