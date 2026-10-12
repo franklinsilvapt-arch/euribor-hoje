@@ -1,13 +1,7 @@
 {
-  "dataReferencia": "8 de outubro de 2026",
+  "dataReferencia": "9 de outubro de 2026",
   "fonte": "Diario: euribor-rates.eu (EMMI, 24h). Medias mensais: Banco de Portugal (BPstat).",
   "serie": [
-    {
-      "d": "06/08/2026",
-      "m3": 2.477,
-      "m6": 2.687,
-      "m12": 2.884
-    },
     {
       "d": "07/08/2026",
       "m3": 2.474,
@@ -271,6 +265,12 @@
       "m3": 2.642,
       "m6": 2.936,
       "m12": 3.213
+    },
+    {
+      "d": "09/10/2026",
+      "m3": 2.632,
+      "m6": 2.909,
+      "m12": 3.191
     }
   ],
   "historico": [
