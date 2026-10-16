@@ -46,16 +46,15 @@
     h += '<div class="lfc-ca-card">';
     h += '<p class="lfc-ca-label">Taxa base em ' + esc(a.mes) + '</p>';
     h += '<p class="lfc-ca-valor">' + pct(a.taxa, 3) + '</p>';
-    h += '<p class="lfc-ca-nota">Taxa bruta anual para novas subscrições da Série F, antes do prémio de permanência e do IRS.';
-    if (a.taxa >= 2.5) h += ' Está no máximo permitido, de 2,5%.';
-    h += '</p>';
+    var nota = "Taxa bruta anual para novas subscrições da Série F, antes do prémio de permanência e do IRS.";
+    if (a.taxa >= 2.5) nota += " Está no máximo permitido, de 2,5%.";
     if (prox && isFinite(prox.taxa)) {
-      h += '<p class="lfc-ca-prox">' + esc(cap(prox.mes)) + ': <strong>' + pct(prox.taxa, 3) + '</strong>, já fixada.</p>';
+      nota += " A taxa de " + esc(prox.mes.split(" de ")[0]) + " já está fixada: <strong>" + pct(prox.taxa, 3) + "</strong>.";
     } else {
       var f = antepenultimo(a.ano, a.mesNum);
-      var proxMes = MESES[a.mesNum % 12];
-      h += '<p class="lfc-ca-prox">A taxa de ' + proxMes + ' é fixada a ' + f.getUTCDate() + ' de ' + MESES[f.getUTCMonth()] + '.</p>';
+      nota += " A taxa de " + MESES[a.mesNum % 12] + " é fixada a " + f.getUTCDate() + " de " + MESES[f.getUTCMonth()] + ".";
     }
+    h += '<p class="lfc-ca-nota">' + nota + "</p>";
     h += "</div>";
 
     h += '<p><strong>Quanto rende uma subscrição feita em ' + esc(a.mes) + '</strong></p>';
@@ -85,11 +84,12 @@
     var s = document.createElement("style");
     s.id = "lfc-ca-css";
     s.textContent =
-      "#lfc-ca-taxa .lfc-ca-card{border:1px solid #ffd9c9;background:#fff6f2;border-radius:16px;padding:20px 24px;margin:0 0 24px}" +
-      "#lfc-ca-taxa .lfc-ca-label{margin:0;font-size:14px;color:#595959}" +
+      "#lfc-ca-taxa .lfc-ca-card{border:1px solid #ffd9c9;background:#fff6f2;border-radius:16px;padding:18px 24px;margin:0 0 24px}" +
+      "#lfc-ca-taxa .lfc-ca-label{margin:0;font-size:14px;line-height:1.4;color:#595959}" +
       "#lfc-ca-taxa .lfc-ca-valor{margin:4px 0 8px;font-size:40px;line-height:1.1;font-weight:700;color:#ff5a1f}" +
-      "#lfc-ca-taxa .lfc-ca-nota,#lfc-ca-taxa .lfc-ca-prox{margin:0 0 4px;font-size:15px}" +
-      "#lfc-ca-taxa .lfc-ca-fonte{margin-top:4px}";
+      "#lfc-ca-taxa .lfc-ca-nota{margin:0;font-size:14px;line-height:1.5}" +
+      /* legenda colada à tabela, como nas tabelas do rich text (p a seguir a um embed tem margin-top:-40px) */
+      "#lfc-ca-taxa .table-content+.lfc-ca-fonte{margin-top:-40px}";
     document.head.appendChild(s);
   }
 
