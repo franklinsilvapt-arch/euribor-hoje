@@ -41,3 +41,4 @@ jobs:
       - name: Purgar jsDelivr
         run: |
           curl -s "https://purge.jsdelivr.net/gh/franklinsilvapt-arch/euribor-hoje@main/certificados-aforro/taxa-ca.json" || true
+          curl -s "https://purge.jsdelivr.net/gh/franklinsilvapt-arch/euribor-hoje@main/certificados-aforro/ca-artigo.js" || true

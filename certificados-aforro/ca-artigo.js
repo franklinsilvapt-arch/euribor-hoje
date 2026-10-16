@@ -88,8 +88,9 @@
       "#lfc-ca-taxa .lfc-ca-label{margin:0;font-size:14px;line-height:1.4;color:#595959}" +
       "#lfc-ca-taxa .lfc-ca-valor{margin:4px 0 8px;font-size:40px;line-height:1.1;font-weight:700;color:#ff5a1f}" +
       "#lfc-ca-taxa .lfc-ca-nota{margin:0;font-size:14px;line-height:1.5}" +
-      /* legenda colada à tabela, como nas tabelas do rich text (p a seguir a um embed tem margin-top:-40px) */
-      "#lfc-ca-taxa .table-content+.lfc-ca-fonte{margin-top:-40px}";
+      /* legenda colada à tabela em todos os ecrãs, como a legenda dos "Prémios de permanência" */
+      "#lfc-ca-taxa .table-content{margin-bottom:0!important}" +
+      "#lfc-ca-taxa .table-content+.lfc-ca-fonte{margin-top:0!important}";
     document.head.appendChild(s);
   }
 
