@@ -1,11 +1,70 @@
 {
   "atual": {
     "taxa": 2.5,
-    "mes": "setembro de 2026",
+    "mes": "outubro de 2026",
     "ano": 2026,
-    "mesNum": 9
+    "mesNum": 10,
+    "origem": "calculada"
   },
   "proxima": null,
-  "atualizadoEm": "2026-09-01T21:11:59Z",
-  "fonte": "https://www.igcp.pt/pt/aforristas/produtos-de-aforro/certificados-de-aforro"
+  "historico": [
+    {
+      "ym": "2025-12",
+      "taxa": 2.057,
+      "origem": "noticias"
+    },
+    {
+      "ym": "2026-01",
+      "taxa": 2.046,
+      "origem": "noticias"
+    },
+    {
+      "ym": "2026-02",
+      "taxa": 2.031,
+      "origem": "noticias"
+    },
+    {
+      "ym": "2026-03",
+      "taxa": 2.012,
+      "origem": "noticias"
+    },
+    {
+      "ym": "2026-04",
+      "taxa": 2.138,
+      "origem": "noticias"
+    },
+    {
+      "ym": "2026-05",
+      "taxa": 2.195,
+      "origem": "noticias"
+    },
+    {
+      "ym": "2026-06",
+      "taxa": 2.215,
+      "origem": "noticias"
+    },
+    {
+      "ym": "2026-07",
+      "taxa": 2.356,
+      "origem": "noticias"
+    },
+    {
+      "ym": "2026-08",
+      "taxa": 2.474,
+      "origem": "noticias"
+    },
+    {
+      "ym": "2026-09",
+      "taxa": 2.5,
+      "origem": "igcp"
+    },
+    {
+      "ym": "2026-10",
+      "taxa": 2.5,
+      "origem": "calculada"
+    }
+  ],
+  "atualizadoEm": "2026-10-16T09:56:32Z",
+  "fonte": "https://www.igcp.pt/pt/aforristas/produtos-de-aforro/certificados-de-aforro",
+  "regra": "https://files.dre.pt/1s/2023/06/10702/0000200003.pdf"
 }

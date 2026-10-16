@@ -53,3 +53,12 @@ A Euribor é um benchmark do **EMMI**. Os dados do euribor-rates.eu têm 24h de 
 **uso não-comercial**. Como o LiteraciaFinanceira.pt é comercial, confirma o licenciamento (EMMI ou um
 fornecedor licenciado) antes de manteres um feed público automático. O parser em `scripts/` está isolado
 e comentado para ser fácil trocar a fonte por uma API licenciada.
+
+## Certificados de Aforro (taxa base mensal)
+
+- `certificados-aforro/taxa-ca.json` - taxa base da Série F: `atual`, `proxima` e `historico` (até 24 meses).
+  Cada valor tem `origem`: `igcp` (lido no IGCP), `calculada` (regra da Portaria n.º 149-A/2023 aplicada à
+  Euribor 3M do `euribor-data.json`) ou `noticias` (valores iniciais). O IGCP substitui sempre o calculado.
+- `scripts/update-certificados-aforro.mjs` - corre no cron `certificados-aforro-update.yml` (dia 1 e 22 a 31).
+- `certificados-aforro/ca-artigo.js` - bloco dinâmico do artigo /artigos/certificados-de-aforro (lê o JSON).
+  O simulador /simulador-certificados-aforro lê o mesmo JSON.
