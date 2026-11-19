@@ -1,13 +1,7 @@
 {
-  "dataReferencia": "17 de novembro de 2026",
+  "dataReferencia": "18 de novembro de 2026",
   "fonte": "Diario: euribor-rates.eu (EMMI, 24h). Medias mensais: Banco de Portugal (BPstat).",
   "serie": [
-    {
-      "d": "16/09/2026",
-      "m3": 2.661,
-      "m6": 2.973,
-      "m12": 3.374
-    },
     {
       "d": "17/09/2026",
       "m3": 2.633,
@@ -271,6 +265,12 @@
       "m3": 2.784,
       "m6": 3.007,
       "m12": 3.361
+    },
+    {
+      "d": "18/11/2026",
+      "m3": 2.825,
+      "m6": 3.016,
+      "m12": 3.351
     }
   ],
   "historico": [
