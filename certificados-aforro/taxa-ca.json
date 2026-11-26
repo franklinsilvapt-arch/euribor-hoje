@@ -6,7 +6,13 @@
     "mesNum": 11,
     "origem": "igcp"
   },
-  "proxima": null,
+  "proxima": {
+    "taxa": 2.5,
+    "mes": "dezembro de 2026",
+    "ano": 2026,
+    "mesNum": 12,
+    "origem": "calculada"
+  },
   "historico": [
     {
       "ym": "2025-12",
@@ -67,9 +73,14 @@
       "ym": "2026-11",
       "taxa": 2.5,
       "origem": "igcp"
+    },
+    {
+      "ym": "2026-12",
+      "taxa": 2.5,
+      "origem": "calculada"
     }
   ],
-  "atualizadoEm": "2026-11-22T23:42:40Z",
+  "atualizadoEm": "2026-11-26T01:53:20Z",
   "fonte": "https://www.igcp.pt/pt/aforristas/produtos-de-aforro/certificados-de-aforro",
   "regra": "https://files.dre.pt/1s/2023/06/10702/0000200003.pdf"
 }
